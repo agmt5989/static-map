@@ -9,11 +9,11 @@
   <title>Calcite Maps - ArcGIS 4.x 2D - 3D</title>
 
   <!-- Calcite Maps Bootstrap -->
-  <link rel="stylesheet" href="../../dist/css/calcite-maps-bootstrap.min-v0.10.css">
+  <link rel="stylesheet" href="../calcite/dist/css/calcite-maps-bootstrap.min-v0.10.css">
 
   <!-- Calcite Maps -->
-  <link rel="stylesheet" href="../../dist/css/calcite-maps-arcgis-4.x.min-v0.10.css">
-  <!--link rel="stylesheet" href="../../dist/css/calcite-maps.min-v0.10.css"--> <!-- works -->
+  <link rel="stylesheet" href="../calcite/dist/css/calcite-maps-arcgis-4.x.min-v0.10.css">
+  <!--link rel="stylesheet" href="../calcite/dist/css/calcite-maps.min-v0.10.css"--> <!-- works -->
 
   <!-- ArcGIS JS 4 -->
   <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
@@ -25,7 +25,7 @@
       height: 100%;
     }
   </style>
-  
+
 </head>
 
 <body class="calcite-maps calcite-nav-top">
@@ -56,12 +56,12 @@
     <div class="calcite-title calcite-overflow-hidden">
       <span class="calcite-title-main">Calcite Maps</span>
       <span class="calcite-title-divider hidden-xs"></span>
-      <span class="calcite-title-sub hidden-xs">Starter app for the ArcGIS API for JS 4.x (dojo)</span> 
+      <span class="calcite-title-sub hidden-xs">Starter app for the ArcGIS API for JS 4.x (dojo)</span>
     </div>
      <!-- Nav -->
-    <ul class="calcite-nav nav navbar-nav">                    
+    <ul class="calcite-nav nav navbar-nav">
       <li><a id="mapNav" class="hidden-xs hidden-sm" href="#mapTab" aria-controls="mapTab" aria-expanded="true" role="tab" data-toggle="tab" data-tooltip="tip" title="2D View" data-placement="bottom">Map</a></li>
-      <li class="active"><a id="sceneNav" class="hidden-xs hidden-sm" href="#sceneTab" aria-controls="mapTab" role="tab" data-toggle="tab" data-tooltip="tip" title="3D View" data-placement="bottom">Scene</a></li>                  
+      <li class="active"><a id="sceneNav" class="hidden-xs hidden-sm" href="#sceneTab" aria-controls="mapTab" role="tab" data-toggle="tab" data-tooltip="tip" title="3D View" data-placement="bottom">Scene</a></li>
       <li>
         <div class="calcite-navbar-search calcite-search-expander" role="presentation" tabindex="-1">
           <div id="searchNavDiv" tabindex="0"></div>
@@ -86,14 +86,14 @@
   <!-- Panel Container -->
 
   <div class="calcite-panels calcite-panels-right calcite-bg-custom calcite-text-light calcite-bgcolor-dark-blue panel-group" role="tablist" aria-multiselectable="true">
-        
+
     <!-- Info Panel -->
-    
+
     <div id="panelInfo" class="panel collapse">
       <div id="headingInfo" class="panel-heading" role="tab">
         <div class="panel-title">
-          <a class="panel-toggle" role="button" data-toggle="collapse" href="#collapseInfo"  aria-expanded="true" aria-controls="collapseInfo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><span class="panel-label">Info</span></a> 
-          <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelInfo"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>  
+          <a class="panel-toggle" role="button" data-toggle="collapse" href="#collapseInfo"  aria-expanded="true" aria-controls="collapseInfo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><span class="panel-label">Info</span></a>
+          <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelInfo"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>
         </div>
       </div>
       <div id="collapseInfo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingInfo">
@@ -117,12 +117,12 @@
     </div>
 
     <!-- Basemaps Panel -->
-    
-    <div id="panelBasemaps" class="panel collapse"> 
+
+    <div id="panelBasemaps" class="panel collapse">
       <div id="headingBasemaps" class="panel-heading" role="tab">
         <div class="panel-title">
-          <a class="panel-toggle collapsed" role="button" data-toggle="collapse" href="#collapseBasemaps" aria-expanded="false"   aria-controls="collapseBasemaps"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span><span class="panel-label">Basemaps</span></a> 
-          <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelBasemaps"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>  
+          <a class="panel-toggle collapsed" role="button" data-toggle="collapse" href="#collapseBasemaps" aria-expanded="false"   aria-controls="collapseBasemaps"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span><span class="panel-label">Basemaps</span></a>
+          <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelBasemaps"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>
         </div>
       </div>
       <div id="collapseBasemaps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingBasemaps">
@@ -148,11 +148,11 @@
     var dojoConfig = {
       packages: [{
         name: "bootstrap",
-        location: location.pathname.replace(/\/[^/]+$/, "") + "./../../dist/vendor/dojo-bootstrap"
+        location: location.pathname.replace(/\/[^/]+$/, "") + "./../calcite/dist/vendor/dojo-bootstrap"
       },
       {
         name: "calcite-maps",
-        location: location.pathname.replace(/\/[^/]+$/, "") + "./../../dist/js/dojo"
+        location: location.pathname.replace(/\/[^/]+$/, "") + "./../calcite/dist/js/dojo"
       }]
     };
   </script>
@@ -177,13 +177,13 @@
       "calcite-maps/calcitemaps-arcgis-support-v0.10",
 
       // Bootstrap
-      "bootstrap/Collapse", 
+      "bootstrap/Collapse",
       "bootstrap/Dropdown",
-      "bootstrap/Tab",      
+      "bootstrap/Tab",
 
       "dojo/domReady!"
     ], function(Map, Basemap, MapView, SceneView, Search, watchUtils, query, CalciteMaps, CalciteMapsArcGIS) {
-        
+
       // App
       app = {
         zoom: 1,
@@ -204,7 +204,7 @@
         containerScene: "sceneViewDiv"
       };
 
-      // Map 
+      // Map
       app.map = new Map({
         basemap: app.basemap,
         ground: "world-elevation"
@@ -253,7 +253,7 @@
       query("#selectBasemapPanel").on("change", function(e){
         app.mapView.map.basemap = e.target.options[e.target.selectedIndex].dataset.vector;
         app.sceneView.map.basemap = e.target.value;
-      });  
+      });
 
       // Tab UI - switch views
       query(".calcite-navbar li a[data-toggle='tab']").on("click", function(e) {
@@ -265,13 +265,13 @@
           setActiveView(app.sceneView);
         }
         syncSearch(app.activeView);
-      }); 
+      });
 
       // Views
       function syncViews(fromView, toView) {
         var viewPt = fromView.viewpoint.clone();
         fromView.container = null;
-        if (fromView.type === "3d") {          
+        if (fromView.type === "3d") {
           toView.container = app.containerMap;
         } else {
           toView.container = app.containerScene;
@@ -287,7 +287,7 @@
           watchUtils.whenTrueOnce(view,"ready",function(){
             app.searchWidgetNav.autoSelect = false;
             app.searchWidgetNav.search(app.searchWidgetNav.selectedResult.name);
-            app.searchWidgetNav.autoSelect = true;            
+            app.searchWidgetNav.autoSelect = true;
           });
         }
       }
